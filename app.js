@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const fs = require('fs');
 
 app.use(cors());
@@ -17,7 +17,7 @@ app.get('/version2', (req, res) => {
     res.send(JSON.parse(file));
   })
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 })
 app.get('/account', (req, res) => {

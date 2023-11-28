@@ -85,7 +85,7 @@ class benebono {
     async handleDivClick(event) {
         var value = event.target.id;
         document.getElementById('basket_input').value = value;
-        event.target.style.backgroundColor = 'black';
+        event.target.style.backgroundColor = 'orange';
         event.preventDefault();
     }
     

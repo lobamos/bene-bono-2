@@ -1,11 +1,8 @@
 import { environment } from './environnement.js';
 
 class benebono {
-    constructor(element, url, ab) {
-        this.element = element;
-        this.url = url;
-        this.ab = ab;
-    }
+    static element = "";
+    static ab = "";
 
     async ajaxLoading() {
         document.getElementById('basket-btn').addEventListener('click', async () => {
@@ -46,7 +43,6 @@ class benebono {
             this.element.innerHTML = data.content;
             var basket_div = document.getElementsByClassName('basket_div');
             for (var i = 0; i < basket_div.length; i++) {
-                console.log(basket_div[i])
                 basket_div[i].addEventListener('click', this.handleDivClick);
             }
 
